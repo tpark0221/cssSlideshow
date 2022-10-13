@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        min-height: 90vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        background-color: khaki;
+        position: relative;
+        z-index: -3;
+      }
+      .slideshow-container {
+        background-color: black;
+        position: relative;
+        width: 560px;
+        height: 300px;
+        border: 5px solid;
+        z-index: -2;
+        overflow: hidden;
+      }
+      .slide {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        opacity: 1;
+      }
+      .slide1 {
+        animation: slide-right 25s 0s linear infinite;
+      }
+      .slide2 {
+        animation: slide-right 25s 5s linear infinite;
+      }
+      .slide3 {
+        animation: slide-right 25s 10s linear infinite;
+      }
+      .slide4 {
+        animation: slide-right 25s 15s linear infinite;
+      }
+      .slide5 {
+        animation: slide-right 25s 20s linear infinite;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @keyframes slide-right {
+        0% {
+          left: 0;
+          z-index: 2;
+          opacity: 1;
+          transform: rotateZ(0deg);
+        }
+        5% {
+          left: 150%;
+          opacity: 0;
+          transform: rotateZ(180deg);
+        }
+        75% {
+          left: 150%;
+          transform: rotateZ(0deg);
+        }
+        76% {
+          left: 0;
+          z-index: -2;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav><h1>Welcome</h1></nav>
+    </header>
+    <main>
+      <section>
+        <div class="slideshow-container">
+          <div class="slide slide5">
+            <img src="images/wil-stewart-pHANr-CpbYM-unsplash.jpg" />
+          </div>
+          <div class="slide slide4">
+            <img
+              src="images/eberhard-grossgasteiger-y2azHvupCVo-unsplash.jpg"
+            />
+          </div>
+          <div class="slide slide3">
+            <img src="images/luca-bravo-VowIFDxogG4-unsplash.jpg" />
+          </div>
+          <div class="slide slide2">
+            <img src="images/vincent-van-zalinge-vUNQaTtZeOo-unsplash.jpg" />
+          </div>
+          <div class="slide slide1">
+            <img src="images/mailchimp-YTZOyio3Udk-unsplash.jpg" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
